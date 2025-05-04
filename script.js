@@ -4,5 +4,5 @@ function saveNote() {
     document.getElementById("saved-note").innerText = "Saved: " + note;
 }
 
-// Load saved note on page refresh
-document.getElementById("note").value = localStorage.getItem("userNote") || "";
+// Show saved note when the page loads
+document.getElementById("saved-note").innerText = "Saved: " + (localStorage.getItem("userNote") || "No notes saved yet.");
