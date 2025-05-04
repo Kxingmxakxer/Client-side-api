@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance API Example</title>
+    <title>Note Storage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Stock Price Tracker</h1>
-    <p id="stock-price">Loading...</p>
+    <h1>Notes</h1>
+    <textarea id="note" placeholder="Write your note here..."></textarea>
+    <button onclick="saveNote()">Save Note</button>
+    <p id="saved-note"></p>
     <script src="script.js"></script>
 </body>
 </html>
