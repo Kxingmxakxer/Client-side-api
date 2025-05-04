@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Camera & Microphone Access</title>
+  <title>Clipboard API Example</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h2>Live Camera & Microphone</h2>
-    <video id="video" autoplay playsinline></video>
-    <button onclick="startMedia()">Start Stream</button>
+    <h2>Clipboard API</h2>
+
+    <input type="text" id="copyText" placeholder="Type something to copy">
+    <button onclick="copyToClipboard()">Copy Text</button>
+
     <p id="status"></p>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
