@@ -1,18 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+async function fetchStockPrice() {
+    const apiKey = 'YOUR_API_KEY';
+    const symbol = 'AAPL';  // Example stock symbol
+    const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        document.getElementById('stock-price').innerText = `AAPL: $${data['Global Quote']['05. price']}`;
+    } catch (error) {
+        console.error("Error fetching data", error);
+    }
 }
-input {
-    padding: 10px;
-    margin: 10px;
-}
-button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-div {
-    margin-top: 10px;
-    font-size: 18px;
-}
+
+fetchStockPrice();
